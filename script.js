@@ -3,8 +3,8 @@ const quoteTextContainer = document.getElementById('quote-text');
 const quoteText = document.getElementById('quote');
 const authorTextContainer = document.getElementById('quote-author');
 const authorText = document.getElementById('author');
-const btnContainer = document.getElementById('button-container');
 const twitterBtn = document.getElementById('twitter');
+const githubBtn = document.getElementById('github');
 const newQuoteBtn = document.getElementById('new-quote');
 const errorMsg = document.getElementById('error-message');
 const loader = document.getElementById('loader');
@@ -36,7 +36,6 @@ function showErrorMessage() {
 
   // show twitter button and push 'New Quote' button to the end
   twitterBtn.hidden = true;
-  btnContainer.style.justifyContent = 'flex-end';
 }
 
 function hideErrorMessage() {
@@ -47,7 +46,6 @@ function hideErrorMessage() {
 
   // show twitter button and add spaces between buttons
   twitterBtn.hidden = false;
-  btnContainer.style.justifyContent = 'space-between';
 }
 
 async function getQuote() {
@@ -101,9 +99,14 @@ function tweetQuote() {
   window.open(twitterUrl, '_blank');
 }
 
+function browseCode() {
+  window.open('https://github.com/patel-priyank/Quote-Generator');
+}
+
 // Event Listeners
 newQuoteBtn.addEventListener('click', getQuote);
 twitterBtn.addEventListener('click', tweetQuote);
+githubBtn.addEventListener('click', browseCode);
 
 // On Load
 hideErrorMessage();

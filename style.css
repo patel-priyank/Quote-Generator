@@ -45,14 +45,22 @@ body {
 
 .button-container {
   margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
+}
+
+.button-container-left {
+  float: left;
+  margin: 0.25em;
+}
+
+.button-container-right {
+  float: right;
+  margin: 0.25em;
 }
 
 button {
   cursor: pointer;
   font-size: 1.25rem;
-  height: 2.5rem;
+  min-height: 2.5rem;
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -61,6 +69,7 @@ button {
   padding: 0.5rem 1.75rem;
   box-shadow: 0 0.25rem rgba(121, 121, 121, 0.65);
   transition: 0.15s;
+  margin: 0.5em 0.25em auto 0.25em;
 }
 
 button:hover {
@@ -76,8 +85,8 @@ button:active {
   color: #38a1f3;
 }
 
-.fa-twitter {
-  font-size: 1.5rem;
+.github-button:hover {
+  color: #c9510c;
 }
 
 .error-message {
@@ -114,6 +123,16 @@ button:active {
 
   .quote-text {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .button-container-left {
+    float: unset;
+  }
+  
+  .button-container-right {
+    float: unset;
   }
 }
 
